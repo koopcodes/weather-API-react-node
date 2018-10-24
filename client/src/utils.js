@@ -7,7 +7,7 @@ import CloudsIcon from './views/assets/weather_icons/05W.svg';
 import NoLocationFound from './views/assets/no-location.svg';
 
 export function weatherAppAPI(requestHeaders, requestBody, callback) {
-  var xhr = new XMLHttpRequest();// eslint-disable-line no-undef
+  var xhr = new XMLHttpRequest();
   const requestEndpoint = WEATHER_API_ENDPOINT;
   const requestOptions = {
     method: 'post',

@@ -20,4 +20,4 @@ ReactDOM.render(
   , document.getElementById('root')
 );
 
-// registerServiceWorker(); // eslint-disable-line no-undef
+// registerServiceWorker(); 
