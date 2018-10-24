@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const port = 5000;
@@ -9,7 +10,7 @@ app.use(express.json());
 require('./routes')(app);
 
 app.get('/', (req, res) => {
-  res.send('PORT 5000');
+  res.send('Server is up and running on Port 5000');
 });
 
 app.listen(port, (err) => {
