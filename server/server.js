@@ -18,7 +18,7 @@ app.get('/favicon.ico', function(req, res) {
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../client/dist/'))); // Serve static files from the React app
+app.use(express.static(path.join(__dirname, '../client/public/'))); // Serve static files from the React app
 
 // Import Routes directory
 require('./routes')(app);
