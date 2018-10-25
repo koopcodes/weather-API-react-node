@@ -8,7 +8,7 @@ export default function WeatherCardError(props) {
     <div className='weatherCardContainer'>
       <div className='weatherCardError'>
         <img src={ NoLocationFound } alt='no location found'/>
-        <p> Whoa! Looks like there was an error with your zipcode.</p>
+        <p> Oops! Looks like there was an error with your zipcode.</p>
         <Link to='/'><button>Try Again</button></Link>
       </div>
     </div>

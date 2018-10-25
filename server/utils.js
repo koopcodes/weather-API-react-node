@@ -4,10 +4,10 @@ const config = require('./config');
 module.exports = {
   generateWebAppURL: function(locationConfigType, locationConfigData) {
     const baseUrlConfig = config.baseUrl;
-    const APIkey = config.APIkey;
+    const REACT_APP_APIkey = config.REACT_APP_APIkey;
     const queryConfig = config.query;
 
-    let requestQuery = { appid: APIkey };
+    let requestQuery = { appid: REACT_APP_APIkey };
 
     if (locationConfigType !== 'coordinates') {
       requestQuery[queryConfig[locationConfigType]] = locationConfigData;

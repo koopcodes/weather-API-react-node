@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   baseUrl: {
     protocol: 'http',
@@ -15,5 +17,5 @@ module.exports = {
     zipcode: 'zip',
   },
 
-  APIkey: 'b9b3b9f5b72dc06f7542a60c38e4a169',
+  REACT_APP_APIkey: 'b9b3b9f5b72dc06f7542a60c38e4a169',
 };
