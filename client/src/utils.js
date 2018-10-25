@@ -54,3 +54,25 @@ export function weatherIcon(weatherId) {
 
   return NoLocationFound;
 }
+
+export function windDegreestoDirection(windDirection) {
+  if (windDirection <= 22) {
+    return "N";
+  } else if (windDirection >22 && windDirection <67) {
+    return "NE";
+  } else if (windDirection >68 && windDirection < 113) {
+    return "E";
+  } else if (windDirection >114 && windDirection < 159) {
+    return "SE";
+  } else if (windDirection > 160 && windDirection < 205) {
+    return "S";
+  } else if (windDirection > 206 && windDirection < 251) {
+    return "SW";
+  } else if (windDirection > 252 && windDirection < 297) {
+    return "W";
+  } else if (windDirection > 298 && windDirection < 333) {
+    return "NW";
+  } else if (windDirection >334) {
+    return "N";
+  }
+}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { weatherIcon } from '../../utils';
+import { windDegreestoDirection } from '../../utils';
 import * as actions from '../../store/actions/index';
 import { WeatherCardError, Loader } from '../Components/index';
 
@@ -15,7 +16,7 @@ class CurrentWeather extends Component {
 
   render() {
     const { loading, loaded, error, currentTemp, currentConditionDescription,
-      humidity, wind, cityName, weatherId } = this.props;
+      humidity, wind, windDirection, cityName, weatherId, rain } = this.props;
 
     if (error) {
       return (
@@ -43,12 +44,14 @@ class CurrentWeather extends Component {
                 <div className='weatherCard'>
                   <img src={weatherIcon(weatherId)} alt='Weather icon'/>
                   <div className='conditionsOverview'>
-                    <p>{currentTemp}°</p>
+                    <p>{currentTemp}° F</p>
                     <p>{currentConditionDescription}</p>
+                    {/* <p>Rain last 3 hours: { rain } mm</p> */}
                   </div>
                   <div className='conditionDetails'>
+                    
                     <p>Humidity: {humidity}% </p>
-                    <p>Wind Speed: {wind} mph </p>
+                    <p>Wind Speed: {wind} mph {windDegreestoDirection(windDirection)}</p>
                   </div>
                 </div>
 
@@ -63,7 +66,7 @@ class CurrentWeather extends Component {
 }
 
 const mapStateToProps = function(state) {
-  const { main, weather, name, wind, loading, loaded, error } = state;
+  const { main, weather, name, wind, loading, loaded, error, rain } = state;
 
   return {
     ...state,
@@ -75,9 +78,10 @@ const mapStateToProps = function(state) {
     humidity: main && main.humidity,
     wind: wind && wind.speed,
     windDirection: wind && wind.deg,
-    currentTemp: main && Math.round(main.temp),
+    currentTemp: main && Math.round((main.temp-273.15)*9/5+32),
     currentCondition: weather && weather[0].main,
     currentConditionDescription: weather && weather[0].description,
+    rain: rain && rain['3h'],
   };
 };
 
