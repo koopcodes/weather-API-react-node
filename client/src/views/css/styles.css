@@ -139,7 +139,10 @@ body {
     position: relative;
     margin-top: 20px; }
     .weatherCardContainer .weatherCard img {
-      margin-top: 20px; }
+			margin-top: 0px;
+			height: 150px;
+			width: 150px;
+    }
     .weatherCardContainer .weatherCard .conditionsOverview {
       display: -webkit-box;
       display: -ms-flexbox;
