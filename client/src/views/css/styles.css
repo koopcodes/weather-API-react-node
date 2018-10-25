@@ -14,7 +14,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 100px;
+  margin-top: 20px;
   letter-spacing: .2px; }
   .header img {
     margin-left: 10px; }
@@ -28,7 +28,7 @@ body {
           justify-content: center;
   margin-top: 10px; }
   .instructions p {
-    width: 25%;
+    width: 75%;
     text-align: center;
     font-size: .9em;
     color: #C0C0C0; }
@@ -43,10 +43,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
+  width: 100%;
   margin-top: 20px; }
   .zipcodeInput input {
-    padding: 10px 170px;
+    padding: 10px 10px;
     border: none;
     border-radius: 2px;
     outline: none;
