@@ -25,10 +25,10 @@
     "node-fetch": "^2.1.2",
     "nodemon": "^1.17.4",
     "react-router-dom": "^4.3.1",
-    "redux-saga": "^0.16.0"
+    "redux-saga": "^0.16.0",
+    "module-alias": "2.0.6"
   },
   "devDependencies": {
-    "module-alias": "2.0.6",
     "redux-devtools-extension": "^2.13.5"
   },
   "_moduleAliases": {
