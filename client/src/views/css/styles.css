@@ -43,8 +43,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  margin-top: 80px; }
+  width: 90%;
+  margin-top: 20px; }
   .zipcodeInput input {
     padding: 10px 170px;
     border: none;

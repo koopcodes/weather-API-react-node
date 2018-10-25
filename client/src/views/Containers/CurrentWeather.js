@@ -16,7 +16,7 @@ class CurrentWeather extends Component {
 
   render() {
     const { loading, loaded, error, currentTemp, currentConditionDescription,
-      humidity, wind, windDirection, cityName, weatherId, rain } = this.props;
+      humidity, wind, windDirection, cityName, weatherId, } = this.props;
 
     if (error) {
       return (
@@ -46,7 +46,6 @@ class CurrentWeather extends Component {
                   <div className='conditionsOverview'>
                     <p>{currentTemp}° F</p>
                     <p>{currentConditionDescription}</p>
-                    {/* <p>Rain last 3 hours: { rain } mm</p> */}
                   </div>
                   <div className='conditionDetails'>
                     
@@ -66,7 +65,7 @@ class CurrentWeather extends Component {
 }
 
 const mapStateToProps = function(state) {
-  const { main, weather, name, wind, loading, loaded, error, rain } = state;
+  const { main, weather, name, wind, loading, loaded, error, } = state;
 
   return {
     ...state,
@@ -81,7 +80,6 @@ const mapStateToProps = function(state) {
     currentTemp: main && Math.round((main.temp-273.15)*9/5+32),
     currentCondition: weather && weather[0].main,
     currentConditionDescription: weather && weather[0].description,
-    rain: rain && rain['3h'],
   };
 };
 

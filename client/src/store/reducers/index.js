@@ -26,9 +26,9 @@ const rootReducer = function(state = defaultState, action) {
       return { ...state, loading: true, loaded: false, error: false };
     }
     case LOADED_WEATHER_DATA: {
-      const { main, weather, name, wind, rain } = payload;
+      const { main, weather, name, wind, } = payload;
 
-      return { ...state, loading: false, loaded: true, main: main, weather: weather, name: name, wind: wind, rain: rain };
+      return { ...state, loading: false, loaded: true, main: main, weather: weather, name: name, wind: wind, };
     }
     case ERROR_WEATHER_DATA: {
       return { ...state, loading: false, error: true };
