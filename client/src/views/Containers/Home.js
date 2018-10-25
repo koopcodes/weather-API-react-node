@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { LightningBolt } from '../assets/lightning.svg';
+import LightningBolt from '../assets/lightning.svg';
 import { RadioButtonSection } from '../Components/index';
 import { setLocationTextInput, setLocationRadioInput,
   setDefaultInput } from '../../store/actions/index';
