@@ -60,8 +60,8 @@ export class Home extends React.Component {
     return (
       <div>
         <div className='header'>
-          <h2>Weather Forcast</h2>
-          <img src={ LightningBolt } alt="LightningBolt"/>
+        <img src={ LightningBolt } alt="LightningBolt"/>
+        <h2>The I Hate Looking Out The Window Weather App</h2>
         </div>
         <div className="instructions">
           <p>Enter a US zipcode below to get the current weather conditions for that area.</p>
@@ -81,6 +81,12 @@ export class Home extends React.Component {
             selectedOption={this.props.locationType}
             onChange={this.handleRadioInputChange}
           />
+        </div>
+        <div className="instructions">
+          <p>Built with React, Redux, Node, Express, and the OpenWeather API</p>
+        </div>
+        <div className="instructions">
+          <a href="https://github.com/koopdev/weather-API-react-node">Source Code</a>
         </div>
       </div>
     );
