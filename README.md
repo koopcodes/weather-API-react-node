@@ -1,13 +1,10 @@
-# weather_app_tutorial
-Weather application code base for Medium tutorial found here: tiny.cc/a0h1ty
+# I Hate Looking Out the Window Weather App
 
+A Node/Express backend consuming an external 3rd party API and returning the results through a React frontend
 
-To install:
-
--Clone the repository to your local machine
-
--Install dependencies in both the root directory and /client 
-
-
-
-#### This application was created with Node.js, Express, React and the Open Weather Map API found here: https://openweathermap.org/api
+Built with:
+- Node 10.12.0
+- Express 4.16.3
+- React 16.5.2
+- Redux 4.0.0
+- [OpenWeather Current Weather API](https://openweathermap.org/current)
