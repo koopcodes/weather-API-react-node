@@ -15,5 +15,5 @@ module.exports = {
     zipcode: 'zip',
   },
 
-  APIkey: 'process.env.weatherAPIkey',
+  APIkey: 'b9b3b9f5b72dc06f7542a60c38e4a169',
 };
